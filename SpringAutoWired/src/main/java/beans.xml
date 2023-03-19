@@ -6,7 +6,12 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
 
-<bean id="Ink" class="org.tnsif.literals.SwiftEngine">
-<!--property name="company" value="Maruti Suzuki"/>
+<!--bean id="ink" class="org.tnsif.autowiredexample.Ink"/-->
+<!--bean id="pen" org.tnsif.autowiredexample.Pen" autowire="byType"-->
+
+<bean id="i" class="org.tnsif.autowiredexample.Ink"/>
+<bean id="pen" class="org.tnsif.autowiredexample.Pen" autowire="constructor">
+<!--property name="i" ref="ink"/-->
+
 </bean>
-</beans>
+</beans> 

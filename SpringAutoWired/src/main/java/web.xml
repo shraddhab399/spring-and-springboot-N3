@@ -5,13 +5,21 @@
     xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+<!--to activate annotation -->
+<context:annotation-config/>
 
-<!--bean id="ink" class="org.tnsif.autowiredexample.Ink"/-->
-<!--bean id="pen" org.tnsif.autowiredexample.Pen" autowire="byType"-->
-
-<bean id="i" class="org.tnsif.autowiredexample.Ink"/>
-<bean id="pen" class="org.tnsif.autowiredexample.Pen" autowire="constructor">
-<!--property name="i" ref="ink"/-->
-
+<bean id="c1" class="org.tnsif.usingautowiredannotation.Cell">
+<property name="company" value="Everyday"/>
+<property name="size" value="small"/>
 </bean>
-</beans> 
+
+<bean id="c2" class="org.tnsif.usingautowiredannotation.Cell">
+<property name="company" value="Nippo"/>
+<property name="size" value="Medium"/>
+</bean>
+
+
+<bean id="remote" class="org.tnsif.usingautowiredannotation.Remote">
+</bean>
+
+</beans>
